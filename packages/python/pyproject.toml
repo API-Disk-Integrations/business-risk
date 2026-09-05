@@ -1,0 +1,47 @@
+[build-system]
+requires = ["hatchling==1.32.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "business-risk"
+version = "1.0.0"
+description = "Verify businesses and continuously monitor registration, officers, ownership, licences and material risk changes. Assesses the entity data you supply; it queries no registry and issues no credit or legal determination."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "API Disk Integrations" }]
+keywords = ["api", "sdk", "business-risk"]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Topic :: Software Development :: Libraries",
+]
+dependencies = []
+
+[tool.hatch.build]
+ignore-vcs = true
+
+[project.urls]
+Homepage = "https://businessrisk-api.com/"
+Documentation = "https://businessrisk-api.com/#docs"
+Pricing = "https://businessrisk-api.com/#pricing"
+Privacy = "https://businessrisk-api.com/privacy"
+Terms = "https://businessrisk-api.com/terms"
+Source = "https://github.com/API-Disk-Integrations/business-risk"
+Issues = "https://github.com/API-Disk-Integrations/business-risk/issues"
+Changelog = "https://github.com/API-Disk-Integrations/business-risk/blob/main/CHANGELOG.md"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/business_risk"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+  "/LICENSE",
+  "/README.md",
+  "/pyproject.toml",
+  "/src/business_risk/__init__.py",
+]
